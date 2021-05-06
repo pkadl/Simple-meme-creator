@@ -10,3 +10,7 @@ text-align: center;
 #buttons {
     text-align: center;
     }
+
+input[type=text] {
+    text-transform: uppercase
+}
