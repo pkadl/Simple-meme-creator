@@ -2,6 +2,7 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 function startCanvas() {
+    console.log("e");
     let showCanvas = document.getElementById("canvas");
     showCanvas.height = 350;
     clearCanvas()
