@@ -2,7 +2,6 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 function startCanvas() {
-    console.log("e");
     let showCanvas = document.getElementById("canvas");
     showCanvas.height = 350;
     clearCanvas()
@@ -24,8 +23,13 @@ let txt = {
 
 const chooseImg = function() {
     let mood = document.askMood.mood;
-    if(mood.value.length == 0) {
-        return `typical.jpg`
+    let fileInput = document.querySelector('#fileLoader');
+   if(fileInput.files.length !== 0) {
+    let url = URL.createObjectURL(fileInput.files[0]);
+    fileInput.value = "";
+    return url;
+   } else if (mood.value.length == 0) {
+         return 'typical.jpg';
     }
 else
 {
