@@ -6,7 +6,7 @@
 <body>
   <div id="main">
     Wybierz sobie jakiego Papaja chcesz zobaczyć i wpisz jakieś myśli chcesz przekazać światu:
-    <form name="askMood" id="form" onchange="startCanvas()">
+    <form name="askMood" id="form" onchange="startCanvas();">
     <input type="radio" id="chooseImage1" value="sad" name="mood">
       <label for="chooseImage1">Papa Tradycja</label>
       <input type="radio" id="chooseImage2" value="crazy" name="mood">
@@ -16,10 +16,10 @@
       <input type="radio" id="chooseImage4" value="typical" name="mood">
       <label for="chooseImage4">Papa Kox</label>
       <br>
-      <input type="file" id="fileLoader" accept="image/*">
-      <label for="chooseImage5"></label>
+      <input type="file" id="fileLoader" accept="image/*" oninput="leaveFile();">
+      
       <br>
-      <input type="text" id="txtLoader1" onfocus="this.value=''" value="WPISZ TEKST GÓRNY" oninput="startCanvas()"  name="txt1">
+      <input type="text" id="txtLoader1" onfocus="this.value=''" value="WPISZ TEKST GÓRNY" oninput="startCanvas();" name="txt1">
       <input type="text" id="txtLoader2" onfocus="this.value=''" value="WPISZ TEKST DOLNY" oninput="startCanvas()" name="txt2">
     </form>
 
