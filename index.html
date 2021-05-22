@@ -2,10 +2,11 @@
     <meta charset="utf-8">
     <title>JP2GMD. HTML/JS exercise.</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="script.js" async></script>
 </head>
 <body>
   <div id="main">
-    Wybierz sobie jakiego Papaja chcesz zobaczyć i wpisz jakieś myśli chcesz przekazać światu:
+    Wybierz sobie postać, którą chcesz zobaczyć i wpisz jakie myśli chcesz przekazać światu:
     <form name="askMood" id="form" onchange="startCanvas();">
     <input type="radio" id="chooseImage1" value="sad" name="mood">
       <label for="chooseImage1">Papa Tradycja</label>
@@ -16,25 +17,19 @@
       <input type="radio" id="chooseImage4" value="typical" name="mood">
       <label for="chooseImage4">Papa Kox</label>
       <br>
-      <input type="file" id="fileLoader" accept="image/*" oninput="leaveFile();">
-      
+      <input type="file" id="fileLoader" accept="image/*" > 
       <br>
-      <input type="text" id="txtLoader1" onfocus="this.value=''" value="WPISZ TEKST GÓRNY" oninput="startCanvas();" name="txt1">
-      <input type="text" id="txtLoader2" onfocus="this.value=''" value="WPISZ TEKST DOLNY" oninput="startCanvas()" name="txt2">
+      <br>
+      <input type="text" id="txtLoader1" onfocus="this.value=''" maxlength="23" value="WPISZ TEKST GÓRNY" name="txt1">
+      <input type="text" id="txtLoader2" onfocus="this.value=''" maxlength="23" value="WPISZ TEKST DOLNY" name="txt2">
     </form>
-
     <canvas width="600" height="0" id="canvas">
     </canvas>
+  
     <div id="buttons">
       <button type="submit" onclick="startCanvas()"> Generuj </button>
-      <button type="submit" onclick="clearCanvas(); clearRadios();"> Wyczyść </button>
-    </div>
-    <div>
-      <img id="prev">
-      <div class="dimensions">
-
-      </div>
+      <button type="submit" onclick="clearCanvas();"> Wyczyść </button>
     </div>  
   </div>  
-<script type="text/javascript" src="script.js"></script>
+
 </body>
